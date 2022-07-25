@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+  <title>MRU and MRUV explained</title>
+  <meta charset="utf-8" />
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+
+</head>
+
+<body onload="plot();plot2();">
+  <h2>Explicación interactiva de MRU y MRUV.</h2>
+  <section>
+    <h3>MRU:</h3>
+    <p>
+        El Movimiento Rectilineo Uniforme es un tipo de movimiento 
+        en el que la velocidad es constante y no interviene la aceleración.
+        
+        Y por tanto el recorrido es lineal, pues a cada segundo que pase
+        la distancia recorrida sera directamente proporcional a la velocidad y la tiempo que pase.
+
+        Es decir, que mientras mas tiempo se le de al objeto, puede recorrer más distancia.
+        Mientras más velocidad tenga, más distancia recorra por segundo.
+    </p>
+    <p>
+        Puede en el siguiente gráfico
+        mover y empezar a indagar por usted mismo, en el siguiente 
+        gráfico, que a medida que usted aumenta la velocidad o el tiempo, 
+        se recorre más distancia.
+    </p>
+  </section>
+
+  <div class="layer">
+    <section id="plotSettings">
+            <label for="distancia">Máxima distancia: </label>
+            <input type="number" id="distancia" value=10 step=0.5 oninput="plot();">
+            <p></p>
+            <label for="velocidad">Velocidad: </label>
+            <input type="number" id="velocidad" value=6 step="0.1" min="0" oninput="plot();">
+            <p></p>
+            <label for="tiempo">Tiempo: </label>
+            <input type="number" id="tiempo" value=10 step=0.5 min="0" oninput="plot();">
+            <p></p>
+            <label for="color">Color: </label>
+            <input type=color id="color" onchange="plot();">
+            <button onclick="plot();">Ejecutar</button>
+    </section>
+    <section id="plot">
+        <h2>Función D = V*T</h2>
+        <div id="myFunction"></div>
+    </section>
+  </div>
+
+  <h2>MRUV</h2>
+  <section>
+    <h2>    El Movimiento Rectilineo Uniformemente Variado.</h2>
+  
+    </section>
+  <div class="layer">
+    <section id="plotSettings">
+        <label for="distancia2">Máxima distancia: </label>
+        <input type="number" id="distancia2" value="23" step="0.5" oninput="plot2();">
+
+        <p></p>
+        <label for="tiempo2">Tiempo máximo: </label>
+        <input type="number" id="tiempo2" value="2.6" step="0.1" oninput="plot2();">
+
+        <p></p>
+        <label for="aceleracion2">Aceleracion(a,cte): </label>
+        <input type="number" id="aceleracion2" value="5" step="0.5" min="0" oninput="plot2();">
+        <p></p>
+        <label for="V0">Velocidad inicial(V0,cte): </label>
+        <input type="number" id="V0" value="6" step="0" min="0" oninput="plot2();">
+        <p></p>
+        <label for="color2">Color: </label>
+        <input type="color" id="color2" onchange="plot2();">
+
+        <button onclick="plot2();">Ejecutar</button>
+    </section>
+    <section id="plot2">
+        <h2>Función D = V0*t+1/2*a*t^2</h2>
+        <div id="myFunction2"></div>
+    </section>
+  </div>
+  <script src="script2.js"></script>
+</body>
+
+</html>
