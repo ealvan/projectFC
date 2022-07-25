@@ -1,1 +1,24 @@
 # project Computational Physiscs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 
