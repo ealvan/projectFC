@@ -1,1 +1,152 @@
-<h3>Teoria Movimiento de cuerpos</h3>
+
+<html lang="en">
+    <head>
+      <title>MRU and MRUV explained</title>
+      <meta charset="utf-8" />
+      <script src="https://d3js.org/d3.v3.min.js"></script>
+      <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js">  </script>
+      <style>
+        #train {
+          position: relative;
+          cursor: pointer;
+          width: 140px;
+        }
+        #train2{
+          position: relative;
+          cursor: pointer;
+          width: 120px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    </head>
+    
+    <body onload="plot();plot2();">
+      <h1>Explicación interactiva de MRU y MRUV.</h2>
+    
+    <section class="container">
+      <section class="texto">
+        <h3>MRU:</h3>
+        <h2>El Movimiento Rectilineo Uniforme.</h2>
+        <p class="lead">
+            El Movimiento Rectilineo Uniforme es un tipo de movimiento 
+            en el que la velocidad es constante y no interviene la aceleración.
+            
+            Y por tanto el recorrido es lineal, pues a cada segundo que pase
+            la distancia recorrida sera directamente proporcional a la velocidad y la tiempo que pase.
+    
+            Es decir, que mientras mas tiempo se le de al objeto, puede recorrer más distancia.
+            Mientras más velocidad tenga, más distancia recorra por segundo.
+        </p>
+        <p class="lead">
+            Puede en el siguiente gráfico
+            mover y empezar a indagar por usted mismo, en el siguiente 
+            gráfico, que a medida que usted aumenta la velocidad o el tiempo, 
+            se recorre más distancia.
+        </p>
+      </section>
+    
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm">
+          <label for="distancia">Máxima distancia: </label>
+          <input type="number" id="distancia" value=10 step=0.5 oninput="plot();">
+        </div>
+        <div class="col-sm">
+          <label for="velocidad">Velocidad: </label>
+          <input type="number" id="velocidad" value=6 step="0.1" min="0" oninput="plot();">
+        </div>  
+        <div class="col-sm">
+          <label for="tiempo">Tiempo: </label>
+          <input type="number" id="tiempo" value=10 step=0.5 min="0" oninput="plot();">
+        </div>  
+        <div class="col-sm">
+          <label for="color">Color: </label>
+          <input type=color id="color" onchange="plot();">
+        </div>  
+        
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <button class="btn btn-primary" onclick="plot();">Ejecutar</button>
+        </div>
+      </div>
+      
+      <div class="row">
+        <section id="plot" class="mx-auto">
+          <h2>Función D = V*T</h2>
+          <div class="mx-auto" id="myFunction" ></div>
+          </section>
+      </div>
+    </div>
+    <div class="animate">
+      <img id="train" src="images/red_car.png">
+    </div>
+    
+    </section>
+    
+    <section class="container" id="mruv">
+        <section class="texto">
+          <h2>MRUV</h2>
+          <h2>El Movimiento Rectilineo Uniformemente Variado.</h2>
+            <p class="lead">
+                El Movimiento Rectilineo Uniformemente Variado(MRUV), se caracteriza principalmente
+                por su aceleración constante, es decir, no cambia en el tiempo. Mientras que en un Movimiento Rectilíneo Uniforme, la velocidad
+                es constante y además la aceleración es 0. 
+            </p>
+            <P class="lead">
+                Se denomina aceleración, aquella variable que incrementa la velocidad por una unidad de tiempo.
+                Lo que indica que la velocidad es variable pero su aceleración es constante.
+            </P>
+            <p class="lead">
+                Puede observa por usted mismo(a) que cuando la aceleración aumenta, también lo hará la velocidad. 
+                Del mismo modo, si usted incrementa la velocidad inicial, se fomenta que la aceleración aumente ese valor inicial.
+            </p>
+        </section>
+        <div class="container">
+          <section class="row">
+            <div class="col-sm">
+              <label for="distancia2">Máxima distancia: </label>
+              <input type="number" id="distancia2" value="23" step="0.5" min="0" oninput="plot2();">
+            </div>
+            <div class="col-sm">
+              <label for="tiempo2">Tiempo máximo: </label>
+              <input type="number" id="tiempo2" value="2.6" step="0.1" min="0" oninput="plot2();">
+            </div>
+            <div class="col-sm">
+              <label for="aceleracion2">Aceleracion(a,cte): </label>
+              <input type="number" id="aceleracion2" value="5" step="0.5" min="0" oninput="plot2();">
+    
+            </div>
+            <div class="col-sm">
+              <label for="V0">Velocidad inicial(V0,cte): </label>
+              <input type="number" id="V0" value="6" step="0" min="0" oninput="plot2();">
+    
+            </div>
+            <div class="col-sm">
+              <label for="color2">Color: </label>
+              <input type="color" id="color2" onchange="plot2();">
+            </div>
+          </section>
+          <section class="row">
+            <button class="btn btn-primary" onclick="plot2();">Ejecutar</button>
+          </section>
+          <div class="row">
+            <section id="plot2" class="mx-auto">
+              <h2>Función D = V0*t+1/2*a*t^2</h2>
+              <div id="myFunction2"></div>
+            </section>
+          </div>
+        </div>
+        <div class="animate">
+          <img id="train2" src="images/orange_car.png">
+        </div>  
+      </section> 
+ 
+    
+      <script src="https://js.cx/libs/animate.js"></script>
+      <script src="js/script2.js"></script>
+    </body>
+</html>
+    
+    
