@@ -109,42 +109,23 @@
                 <li>
                   <img alt=""
                     src="https://i.ytimg.com/vi/Uz3yMKHe088/maxresdefault.jpg">
-                  <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Esquema_cargas_puntuales..gif">
-                  <img alt="" src="https://www.areatecnologia.com/electricidad/imagenes/ley-coulomb.jpg">
+                  <img alt="" src="http://hyperphysics.phy-astr.gsu.edu/hbasees/magnetic/imgmag/rthnd.gif">
+                  <img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP8UpcR0UmKr6xlAmcuROkfdEzSGN1Fr8vSZo6SyEYmZwg3lTxGEVz0_lG8bqxfix0AW0&usqp=CAU">
 
-                    <p>Carga 1 (en micro):<input title="Carga1" type="text" id="q1"> </p>
-                    <p>Carga 2 (en micro):<input title="Carga2" type="text" id="q2"> </p>
-                    <p>Radio (en metros):<input title="Radio" type="text" id="dF1"> </p>
-                    <p><button onclick="fuerzaEntreDosCargas()">Hallar Fuerza</button></p>
+                    <p>Carga (en micro):<input title="Carga1" type="text" id="q1"> </p>
+                    <p>Rapidez (en m/s):<input title="Rapidez" type="text" id="ra"> </p>
+                    <p>Magnitud campo magnetico (en Tesla):<input title="Magnitud" type="text" id="ma"> </p>
+                    <p>Angulo (en Grados):<input title="Angulo" type="text" id="an"> </p>
+                    <p><button onclick="fuerzaMagnetica()">Hallar Fuerza</button></p>
                     <p id="rpta1"></p>
                   <script>
-                    function fuerzaEntreDosCargas() {
-                      var constante = 9000000000;
+                    function fuerzaMagnetica() {
                       var numero1 = document.getElementById("q1").value;
-                      var numero2 = document.getElementById("q2").value;
-                      var numero3 = document.getElementById("dF1").value;
-                      var op = constante * ((numero2 * numero1 * (1/1000000000000)) / (numero3*numero3));
-                      document.getElementById('rpta1').innerHTML =  Math.abs(op);
-                    }
-                  </script>
-                </li>
-
-                <li>
-                  <img alt="" src="https://leerciencia.net/wp-content/uploads/2022/05/campo-e.jpg">
-                  <img alt="" src="https://cdn.todamateria.com/imagenes/campo-electrico-2-1-cke.jpg">
-                  <img alt="" src="https://image.jimcdn.com/app/cms/image/transf/none/path/sce1fe2a743ab0a00/image/idb7ed5b74e413c2d/version/1469392323/image.jpg">
-                  <img alt="" src="https://enfisica.com/wp-content/uploads/F%C3%B3rmula-de-intensidad-de-campo-el%C3%A9ctrico.jpg">
-                  <p>Carga (en micro):<input title="Carga" type="text" id="q1-ce"> </p>
-                    <p>Radio (en metros):<input title="Radio" type="text" id="dF1-ce"> </p>
-                    <p><button onclick="campoElectrico()">Hallar Campo electrico</button></p>
-                    <p id="rpta2"></p>
-                  <script>
-                    function campoElectrico() {
-                      var constante = 9000000000;
-                      var numero1 = document.getElementById("q1-ce").value;
-                      var numero3 = document.getElementById("dF1-ce").value;
-                      var op = constante * ((numero1 * (1/1000000)) / (numero3*numero3));
-                      document.getElementById('rpta2').innerHTML =  Math.abs(op);
+                      var numero2 = document.getElementById("ra").value;
+                      var numero3 = document.getElementById("ma").value;
+                      var numero4 = document.getElementById("an").value;
+                      var op = numero1*numero2*numero3*Math.sin(numero4*Math.PI/180);
+                      document.getElementById('rpta1').innerHTML =  Math.abs(op) + "Newtons";
                     }
                   </script>
                 </li>
@@ -156,7 +137,6 @@
       </section>
       <!-- Blockquote-->
       
-      <!-- Page Footer--><a class="banner" href="https://www.templatemonster.com/website-templates/monstroid2.html" target="_blank"><img src="images/monstroid-big-2.jpg" alt="" height="0"></a>
       <footer class="section footer-classic bg-gray-950">
         <div class="footer-classic-main">
           <div class="container"> 
