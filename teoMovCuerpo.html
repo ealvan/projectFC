@@ -1,12 +1,296 @@
-<!DOCTYPE html>
-<html>
+
+<html lang="en">
     <head>
-
+      <title>MRU and MRUV explained</title>
+      <meta charset="utf-8" />
+      <script src="https://d3js.org/d3.v3.min.js"></script>
+      <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js">  </script>
+      <style>
+        #train {
+          position: relative;
+          cursor: pointer;
+          width: 140px;
+        }
+        #train2{
+          position: relative;
+          cursor: pointer;
+          width: 120px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     </head>
-<body>
-
-
-
-</body>
+    
+    <body onload="plot();plot2();">
+      <h1>Explicación interactiva de MRU y MRUV.</h2>
+    
+    <section class="container">
+      <section class="texto">
+        <h3>MRU:</h3>
+        <h2>El Movimiento Rectilineo Uniforme.</h2>
+        <p class="lead">
+            El Movimiento Rectilineo Uniforme es un tipo de movimiento 
+            en el que la velocidad es constante y no interviene la aceleración.
+            
+            Y por tanto el recorrido es lineal, pues a cada segundo que pase
+            la distancia recorrida sera directamente proporcional a la velocidad y la tiempo que pase.
+    
+            Es decir, que mientras mas tiempo se le de al objeto, puede recorrer más distancia.
+            Mientras más velocidad tenga, más distancia recorra por segundo.
+        </p>
+        <p class="lead">
+            Puede en el siguiente gráfico
+            mover y empezar a indagar por usted mismo, en el siguiente 
+            gráfico, que a medida que usted aumenta la velocidad o el tiempo, 
+            se recorre más distancia.
+        </p>
+      </section>
+    
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-sm">
+          <label for="distancia">Máxima distancia: </label>
+          <input type="number" id="distancia" value=10 step=0.5 oninput="plot();">
+        </div>
+        <div class="col-sm">
+          <label for="velocidad">Velocidad: </label>
+          <input type="number" id="velocidad" value=6 step="0.1" min="0" oninput="plot();">
+        </div>  
+        <div class="col-sm">
+          <label for="tiempo">Tiempo: </label>
+          <input type="number" id="tiempo" value=10 step=0.5 min="0" oninput="plot();">
+        </div>  
+        <div class="col-sm">
+          <label for="color">Color: </label>
+          <input type=color id="color" onchange="plot();">
+        </div>  
+        
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <button class="btn btn-primary" onclick="plot();">Ejecutar</button>
+        </div>
+      </div>
+      
+      <div class="row">
+        <section id="plot" class="mx-auto">
+          <h2>Función D = V*T</h2>
+          <div class="mx-auto" id="myFunction" ></div>
+          </section>
+      </div>
+    </div>
+    <div class="animate">
+      <img id="train" src="../images/red_car.png">
+    </div>
+    
+    </section>
+    
+    <section class="container" id="mruv">
+        <section class="texto">
+          <h2>MRUV</h2>
+          <h2>El Movimiento Rectilineo Uniformemente Variado.</h2>
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, aspernatur cupiditate? Dolore, temporibus praesentium possimus aspernatur, fugiat cupiditate quos nobis minima ratione voluptatum eveniet, recusandae quas mollitia voluptas quod voluptatibus?
+          </p>
+        </section>
+        <div class="container">
+          <section class="row">
+            <div class="col-sm">
+              <label for="distancia2">Máxima distancia: </label>
+              <input type="number" id="distancia2" value="23" step="0.5" min="0" oninput="plot2();">
+            </div>
+            <div class="col-sm">
+              <label for="tiempo2">Tiempo máximo: </label>
+              <input type="number" id="tiempo2" value="2.6" step="0.1" min="0" oninput="plot2();">
+            </div>
+            <div class="col-sm">
+              <label for="aceleracion2">Aceleracion(a,cte): </label>
+              <input type="number" id="aceleracion2" value="5" step="0.5" min="0" oninput="plot2();">
+    
+            </div>
+            <div class="col-sm">
+              <label for="V0">Velocidad inicial(V0,cte): </label>
+              <input type="number" id="V0" value="6" step="0" min="0" oninput="plot2();">
+    
+            </div>
+            <div class="col-sm">
+              <label for="color2">Color: </label>
+              <input type="color" id="color2" onchange="plot2();">
+            </div>
+          </section>
+          <section class="row">
+            <button class="btn btn-primary" onclick="plot2();">Ejecutar</button>
+          </section>
+          <div class="row">
+            <section id="plot2" class="mx-auto">
+              <h2>Función D = V0*t+1/2*a*t^2</h2>
+              <div id="myFunction2"></div>
+            </section>
+          </div>
+        </div>
+        <div class="animate">
+          <img id="train2" src="../images/orange_car.png">
+        </div>  
+      </section>  
+     
+      <section class="container"  id="questions">
+        <!-- <form> -->
+          <div class="form-group">
+            <section class="texto" id="q1">
+              <h3>Problema 1:</h3>
+              <!-- PROBLEMA 8 -->
+              <p>La velocidad(media) de un auto que recorre 
+                200 metros en línea recta es 25 m/s. Si su aceleración es 
+                constante e igual a 4m/s^2.
+                Calcule la velocidad de partida en m/s.
+              </p>
+            </section>
+            <div class="container-sm">
+              <section class="d-flex justify-content-around">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p1Options" id="p11" value="option1">
+                  <label class="form-check-label" for="p11">A. 13</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p1Options" id="p12" value="option2">
+                  <label class="form-check-label" for="p12">B. 26</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p1Options" id="p13" value="option3">
+                  <label class="form-check-label" for="p13">C. 25</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p1Options" id="p14" value="option4">
+                  <label class="form-check-label" for="p14">D. 14</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p1Options" id="p15" value="option5">
+                  <label class="form-check-label" for="p15">E. 9</label>
+                </div>
+              </section>  
+            </div>
+          </div>
+          <div class="form-group">
+            <section class="texto" id="q2">
+              <h3>Problema 2:</h3>
+            <!-- PROBLEMA 9  -->
+            <p>
+              En un cierto instante la aceleración <b>"a"</b>, la velocidad <b>"V"</b>
+              y la posición <b>"X"</b>, de un móvil en M.R.U.V valen 4m/s^2, 4m/s y 4m
+              , respectivamente.
+              4 segundos después del instante mencionado, los
+              valores de <b>"a"</b>, <b>"V"</b> y <b>"X"</b> en las mismas unidades serán, respectivamente.
+            </p>
+            </section>
+          <div class="container-sm">
+            <section class="d-flex justify-content-around">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="p2Options" id="p21" value="option1">
+                <label class="form-check-label" for="p21">A. (8;20;52)</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="p2Options" id="p22" value="option2">
+                <label class="form-check-label" for="p22">B. (0;10;20)</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="p2Options" id="p23" value="option3">
+                <label class="form-check-label" for="p23">C. (4;20;48)</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="p2Options" id="p24" value="option4">
+                <label class="form-check-label" for="p24">D. (4;20;52)</label>
+              </div>
+            </section>  
+          </div>
+          </div>
+          <div class="form-group">
+            <section class="texto" id="q3">
+              <h3>Problema 3:</h3>
+              <!-- Problema 11 -->
+              <p>
+                Dos partículas partiendo de reposo recorren 
+                la misma distancia con movimiento rectilíneo
+                de aceleración constante. La aceleración de la primera es 
+                <b>a</b> y la segunda es <b>A</b>. Si la segunda partícula 
+                hace el recorrido en la mitad del tiempo empleado
+                por la primera, la relación <b>a/A</b> es:
+              </p>
+    
+      
+            </section>
+            <div class="container-sm">
+              <section class="d-flex justify-content-around">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p3Options" id="p31" value="option1">
+                  <label class="form-check-label" for="p31">A. 1/4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p3Options" id="p32" value="option2">
+                  <label class="form-check-label" for="p32">B. 1/2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p3Options" id="p33" value="option3">
+                  <label class="form-check-label" for="p33">C. 1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p3Options" id="p34" value="option3">
+                  <label class="form-check-label" for="p34">D. 2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p3Options" id="p35" value="option3">
+                  <label class="form-check-label" for="p35">D. 4</label>
+                </div>
+              </section>  
+            </div>
+            
+          </div>
+          <div class="form-group">
+              <section class="texto" id="q4">
+                <h3>Problema 4:</h3>
+                <!-- Problema 20 -->
+                <p>
+                  Un auto realiza un movimiento rectilíneo con una aceleración
+                  de <b>1m/s^2</b>; primero recorre un tramo en <b>1s</b> y a continuación 
+                  otro tramo de <b>5m</b> de longitud. Si la velocidad media en el primer tramo 
+                  es de <b>1m/s</b>, la velocidad media del movimiento completo, en <b>m/s</b> es:
+                </p>
+              </section>
+            <div class="container-sm">
+              <section class="d-flex justify-content-around">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p4Options" id="p41" value="option1">
+                  <label class="form-check-label" for="p41">A. 1 m/s</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p4Options" id="p42" value="option2">
+                  <label class="form-check-label" for="p42">B. 2 m/s</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p4Options" id="p43" value="option3">
+                  <label class="form-check-label" for="p43">C. 3 m/s</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p4Options" id="p44" value="option4">
+                  <label class="form-check-label" for="p44">D. 4 m/s</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="p4Options" id="p45" value="option5">
+                  <label class="form-check-label" for="p45">D. 0.5 m/s</label>
+                </div>
+              </section>  
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="mx-auto">
+              <button    class="btn btn-primary" id="evaluar">Evaluar</button>
+            </div>
+          </div>
+        <!-- </form> -->
+      </section>
+    
+      <script src="https://js.cx/libs/animate.js"></script>
+      <script src="js/script2.js"></script>
+    </body>
 </html>
-
+    
+    
