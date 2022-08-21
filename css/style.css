@@ -4670,6 +4670,7 @@ a.thumbnail-thin {
 	position: relative;
 	overflow: hidden;
 	background: url("https://imagenes.elpais.com/resizer/fUXsYFl2q1rAL6yo57ePFjMVDfY=/1960x1470/cloudfront-eu-central-1.images.arcpublishing.com/prisa/KVISPYI56JA2VJ245PVUX2TKWU.webp") center;
+	background-size: cover;
 }	
 .breadcrumbs-custom-inner {
 	z-index: 1;

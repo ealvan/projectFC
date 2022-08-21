@@ -1,1 +1,260 @@
-<h3>Ejercicios Magnetismo</h3>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Quiz de el Magentismo.</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Modern theme -->
+    <link href="https://unpkg.com/survey-jquery/modern.min.css" type="text/css" rel="stylesheet">
+
+    <!-- Default V2 theme -->
+    <!-- <link href="https://unpkg.com/survey-jquery/defaultV2.min.css" type="text/css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://unpkg.com/survey-jquery/survey.jquery.min.js"></script>
+    <script type="text/javascript" src="js/questionsMagnituds.js"></script>
+
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,400,500,700%7CZilla+Slab:300,400,500,700,700i%7CGloria+Hallelujah"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .ie-panel {
+            display: none;
+            background: #212121;
+            padding: 10px 0;
+            box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+            clear: both;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        html.ie-10 .ie-panel,
+        html.lt-ie-10 .ie-panel {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page Header-->
+    <header class="section page-header page-header-1">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+            <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+                data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed"
+                data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed"
+                data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static"
+                data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px"
+                data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+                <div class="rd-navbar-main-outer">
+                    <div class="rd-navbar-main">
+                        <!-- RD Navbar Panel-->
+                        <div class="rd-navbar-panel">
+                            <!-- RD Navbar Toggle-->
+                            <button class="rd-navbar-toggle"
+                                data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                            <!-- RD Navbar Brand-->
+                            <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark"
+                                        src="images/logo-default-245x50.png" alt="" width="245" height="50" /><img
+                                        class="brand-logo-light" src="images/logo-inverse-245x50.png" alt="" width="245"
+                                        height="50" /></a>
+                            </div>
+                        </div>
+                        <div class="rd-navbar-nav-wrap">
+                            <!-- RD Navbar Nav		-->
+                            <ul class="rd-navbar-nav">
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Typography</a>
+                                </li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="magnetismo">
+            <div class="container breadcrumbs-custom-container">
+                <div class="breadcrumbs-custom-inner context-dark">
+                  <div class="breadcrumbs-custom-item">
+                    <h6>Pequeñas interacciones</h6>
+                    <h1 class="breadcrumbs-custom-title">El magnetismo</h1>
+                  </div>
+                  <ul class="breadcrumbs-custom-path">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">El magnetismo (Ejercicios)</li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+    </header>
+
+    <br>
+    <br>
+    <br>
+    <section class="container">
+        <h2>Ejercicios del Magnetismo</h2>
+        <section class="container" id="questions">
+            <!-- <form> -->
+            <div class="form-group">
+                <section class="texto" id="q1">
+                    <h3>Problema 1:</h3>
+                    <!-- PROBLEMA 8 -->
+                    <p>
+                        Dos espiras circulares se sitúan de la manera indicada en la figura, con las intensidades de corriente en los sentidos que se indican. ¿Cómo es la interacción de la inferior sobre la superior?
+                    </p>
+                    <img alt="Imagen de dos cargas"
+                    src="http://laplace.us.es/wiki/images/7/74/Dos-espiras-paralelas.png">
+                </section>
+                <div class="container-sm">
+                    <section class="d-flex justify-content-around">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1Options" id="p11" value="option1">
+                            <label class="form-check-label" for="p11">A. La atrae.</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1Options" id="p12" value="option2">
+                            <label class="form-check-label" for="p12">B. No ejerce ninguna interacción</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1Options" id="p13" value="option3">
+                            <label class="form-check-label" for="p13">C. La repele.</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1Options" id="p14" value="option4">
+                            <label class="form-check-label" for="p14">D. Aparece un par de fuerzas que tiende a darle la vuelta.</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p1Options" id="p15" value="option5">
+                            <label class="form-check-label" for="p15">E. Ninguna de las Anteriores</label>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="form-group">
+                <section class="texto" id="q2">
+                    <h3>Problema 2:</h3>
+                    <!-- PROBLEMA 9  -->
+                    <p>
+                        Dos cargas eléctricas iguales se mueven por el eje Z. En un instante dado una se encuentra en el origen moviéndose con +v_0\vec{k} y la otra en a\vec{k} moviéndose con -v_0\vec{k}. ¿Cómo es la fuerza magnética entre las cargas?
+                    </p>
+                </section>
+                <div class="container-sm">
+                    <section class="d-flex justify-content-around">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p2Options" id="p21" value="option1">
+                            <label class="form-check-label" for="p21">A. Atractiva.</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p2Options" id="p22" value="option2">
+                            <label class="form-check-label" for="p22">B. Repulsiva.</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p2Options" id="p23" value="option3">
+                            <label class="form-check-label" for="p23">C. Nula.</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p2Options" id="p24" value="option4">
+                            <label class="form-check-label" for="p24">D. Perpendicular al eje Z.</label>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="form-group">
+                <section class="texto" id="q3">
+                    <h3>Problema 3:</h3>
+                    <!-- Problema 11 -->
+                    <p>
+                        Se tiene una espira circular en el plano XY, centrada en el origen, por la cual circula una corriente I0 en sentido antihorario. Por el centro de la espira pasa una carga positiva + q, moviéndose con velocidad
+                    </p>
+
+
+                </section>
+                <div class="container-sm">
+                    <section class="d-flex justify-content-around">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p3Options" id="p31" value="option1">
+                            <label class="form-check-label" for="p31">A.  Una fuerza en el sentido -j.</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p3Options" id="p32" value="option2">
+                            <label class="form-check-label" for="p32">B. Una fuerza en el sentido k. </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p3Options" id="p33" value="option3">
+                            <label class="form-check-label" for="p33">C. Una fuerza en el sentido i..</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p3Options" id="p34" value="option3">
+                            <label class="form-check-label" for="p34">D. Ninguno, ya que el campo es nulo en el centro de la espira</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p3Options" id="p35" value="option3">
+                            <label class="form-check-label" for="p35">E. La pregunta no tiene sentido</label>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <section class="texto" id="q4">
+                    <h3>Problema 4:</h3>
+                    <!-- Problema 20 -->
+                    <p>
+                        Se aumenta el radio de una espira circular por 4. ¿Por cuánto hay que multiplicar la corriente que circula por ella para que produzca el mismo campo magnético en su centro?
+                    </p>
+                </section>
+                <div class="container-sm">
+                    <section class="d-flex justify-content-around">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p4Options" id="p41" value="option1">
+                            <label class="form-check-label" for="p41">A. Es indiferente, porque el campo justo en el centro es nulo.</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p4Options" id="p42" value="option2">
+                            <label class="form-check-label" for="p42">B. Por 4.</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p4Options" id="p43" value="option3">
+                            <label class="form-check-label" for="p43">C. Por 2.</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p4Options" id="p44" value="option4">
+                            <label class="form-check-label" for="p44">D. Por 16.</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="p4Options" id="p45" value="option5">
+                            <label class="form-check-label" for="p45">E. Ninguna de las anteriores</label>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="mx-auto">
+                    <button class="btn btn-primary" id="evaluar">Evaluar</button>
+                </div>
+            </div>
+            <!-- </form> -->
+            <script src="js/scriptQuestionsMagnetismo.js"></script>
+        </section>
+    </section>
+
+</body>
+
+</html>
